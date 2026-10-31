@@ -2,7 +2,7 @@
 
 **[Español](#español) · [English](#english)**
 
-> 🔗 **Demo:** _(pendiente de deploy)_ · Sin registro: los datos de ejemplo se guardan en tu navegador / No sign-up: sample data lives in your browser.
+> 🔗 **Demo:** [calendario-jtorres.vercel.app](https://calendario-jtorres.vercel.app) · Sin registro: los datos de ejemplo se guardan en tu navegador / No sign-up: sample data lives in your browser.
 
 ![Vista semanal](docs/screenshots/semana.webp)
 

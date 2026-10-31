@@ -43,24 +43,24 @@ export function Toolbar() {
         <Menu />
       </Button>
 
-      <h1 className="mr-auto flex min-w-0 flex-1 items-baseline gap-2 sm:flex-none" aria-live="polite">
+      <h1 className="mr-auto flex min-w-0 flex-1 items-baseline gap-2 lg:flex-none" aria-live="polite">
         <span className="truncate font-display text-[1.6rem] font-semibold capitalize leading-none tracking-[-0.02em] md:text-[2.25rem]">{main}</span>
         <span className="hidden shrink-0 font-display text-lg font-light capitalize text-muted sm:inline md:text-xl">{sub}</span>
       </h1>
 
-      <div className="flex items-center sm:order-last">
+      <div className="flex items-center lg:order-last">
         <Button variant="ghost" size="icon" onClick={() => setSearchOpen(true)} aria-label={t.search}><Search /></Button>
         <SettingsMenu />
       </div>
 
-      <div className="flex w-full items-center gap-2 sm:w-auto">
+      <div className="flex w-full items-center gap-2 lg:ml-auto lg:w-auto">
         <div className="flex items-center rounded-lg border border-line-strong bg-surface">
           <Button variant="ghost" size="icon-sm" onClick={() => step(-1)} aria-label={t.previous}><ChevronLeft /></Button>
           <Button variant="ghost" size="sm" onClick={goToday} className="rounded-none border-x border-line">{t.today}</Button>
           <Button variant="ghost" size="icon-sm" onClick={() => step(1)} aria-label={t.next}><ChevronRight /></Button>
         </div>
 
-        <div role="tablist" aria-label={t.views.week} className="ml-auto flex rounded-lg bg-surface-2 p-0.5 sm:ml-0">
+        <div role="tablist" aria-label={t.views.week} className="ml-auto flex rounded-lg bg-surface-2 p-0.5">
           {views.map(v => (
             <button
               key={v}

@@ -305,7 +305,7 @@ function TimedEvent({ p }: { p: PositionedOccurrence }) {
         transform: dx || dy ? `translate3d(${dx}px, ${dy}px, 0)` : undefined,
       }}
       className={cn(
-        "absolute flex touch-none flex-col overflow-hidden rounded-md border-l-[3px] border-[var(--c-solid)] px-1.5 text-left text-xs",
+        "@container absolute flex touch-none flex-col overflow-hidden rounded-md border-l-[3px] border-[var(--c-solid)] px-1.5 text-left text-xs",
         chipColorClasses,
         compact ? "justify-center py-0" : "py-1",
         isDragging || resizeDelta ? "z-30 shadow-[0_10px_24px_-8px_rgba(15,20,40,.45)] ring-1 ring-[var(--c-solid)]" : "z-0 hover:z-20 hover:brightness-[.98]"
@@ -313,8 +313,8 @@ function TimedEvent({ p }: { p: PositionedOccurrence }) {
     >
       <span className={cn("flex min-w-0 items-center gap-1 font-semibold leading-tight", compact && "text-[11px]")}>
         <span className="truncate">{o.event.title}</span>
-        {o.event.recurrence && <Repeat className="size-3 shrink-0 opacity-60" aria-hidden />}
-        {compact && <span className="ml-auto shrink-0 font-normal opacity-75 tabular-nums">{fmt(start)}</span>}
+        {o.event.recurrence && <Repeat className="hidden size-3 shrink-0 opacity-60 @[6rem]:block" aria-hidden />}
+        {compact && <span className="ml-auto hidden shrink-0 font-normal opacity-75 tabular-nums @[8rem]:inline">{fmt(start)}</span>}
       </span>
       {!compact && (
         <span className="truncate leading-tight opacity-80 tabular-nums">
